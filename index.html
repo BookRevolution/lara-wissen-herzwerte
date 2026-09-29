@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deine Herzwerte: Die Checkliste | Dr. Lara Vadlau</title>
+<meta name="description" content="Die Herzwerte-Checkliste von Dr. Lara Vadlau: alle Grenzwerte nach den europäischen Leitlinien für Blutdruck, Blutzucker, LDL, Lp(a), hs-CRP und mehr. Plus dein Risikoprofil in 3 Schritten.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Dr. Lara Vadlau · Longevity Medicine">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Deine Herzwerte: Die Checkliste">
+<meta property="og:description" content="Die Zahlen, die du kennen solltest, bevor dein Herz sich meldet. Mit allen Leitlinien-Grenzwerten.">
+<meta property="og:url" content="https://lara-herzwerte.vercel.app">
+<meta property="og:image" content="https://lara-herzwerte.vercel.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Deine Herzwerte: Die Checkliste">
+<meta name="twitter:description" content="Die Zahlen, die du kennen solltest, bevor dein Herz sich meldet. Mit allen Leitlinien-Grenzwerten.">
+<meta name="twitter:image" content="https://lara-herzwerte.vercel.app/og.jpg">
+<link rel="canonical" href="https://lara-herzwerte.vercel.app">
+<meta name="theme-color" content="#0d131e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#d4af37;--gold-soft:#e6c86b;--dark:#141b28;--darker:#0d131e;
+  --panel:#1b2434;--panel-2:#212c40;--line:rgba(212,175,55,.18);
+  --text:#e8ecf3;--muted:#9aa6bb;--muted-2:#6f7c93;
+  --green:#5fbf8f;--amber:#e0a94a;--red:#d97a72;--maxw:1120px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--darker);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.serif{font-family:'Fraunces',Georgia,serif;font-weight:500}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:18px}
+a{color:var(--gold-soft);text-decoration:none}
+a:hover{text-decoration:underline}
+
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-soft));z-index:2000;transition:width .1s}
+
+header{position:sticky;top:0;z-index:1000;background:rgba(13,19,30,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:'Fraunces',serif;font-size:19px;font-weight:600;letter-spacing:-.01em;color:#fff}
+.brand span{color:var(--gold)}
+nav.links{display:flex;gap:24px}
+nav.links a{color:var(--muted);font-size:13.5px;font-weight:500}
+nav.links a:hover{color:var(--gold);text-decoration:none}
+@media(max-width:900px){nav.links{display:none}}
+
+.hero{position:relative;padding:88px 0 70px;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-30%;right:-15%;width:680px;height:680px;background:radial-gradient(circle,rgba(212,175,55,.12) 0%,transparent 68%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-40%;left:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(217,122,114,.06) 0%,transparent 70%);pointer-events:none}
+.hero .container{position:relative;z-index:2}
+.hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(34px,5.4vw,58px);line-height:1.08;letter-spacing:-.02em;color:#fff;max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .sub{margin-top:20px;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(17px,2.2vw,21px);color:var(--gold-soft)}
+.hero .lede{margin-top:22px;font-size:clamp(16px,2.1vw,19px);color:var(--muted);max-width:62ch;line-height:1.6}
+.hero .lede b{color:var(--text)}
+.byline{margin-top:34px;display:flex;align-items:center;gap:14px;color:var(--muted);font-size:14px}
+.byline .avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;flex:none}
+.byline .avatar img{width:100%;height:100%;object-fit:cover}
+.byline b{color:var(--text)}
+
+section{padding:70px 0;border-top:1px solid rgba(255,255,255,.04)}
+.sec-head{max-width:64ch;margin-bottom:36px}
+.sec-head h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(26px,3.6vw,38px);line-height:1.15;letter-spacing:-.01em;color:#fff}
+.sec-head p{margin-top:16px;color:var(--muted);font-size:17px}
+
+.principle{margin-top:28px;background:var(--darker);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:20px 24px;color:var(--text);font-size:16px}
+.principle .l{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px}
+
+/* tables */
+.tbl-wrap{overflow-x:auto;border-radius:16px;border:1px solid var(--line)}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+.tbl caption{caption-side:top;text-align:left;padding:16px 20px 12px;color:var(--gold);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;background:var(--panel)}
+.tbl th,.tbl td{padding:14px 18px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);vertical-align:top}
+.tbl th{background:var(--panel-2);color:var(--gold);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.tbl tbody tr{background:var(--panel)}
+.tbl td.w{color:#fff;font-weight:600}
+.tbl td.g{color:var(--green);font-weight:700}
+.tbl td.a{color:var(--amber);font-weight:700}
+.tbl td.r{color:var(--red);font-weight:700}
+.tbl td.v{color:var(--gold-soft);font-weight:600;white-space:nowrap}
+.tbl tr:last-child td{border-bottom:none}
+.src{display:block;margin-top:10px;font-size:12px;color:var(--muted-2);letter-spacing:.02em}
+.tblnote{margin-top:14px;background:rgba(212,175,55,.06);border:1px solid var(--line);border-radius:12px;padding:16px 20px;font-size:14px;color:var(--text)}
+.tblnote b{color:var(--gold-soft)}
+.gap{margin-top:34px}
+
+/* measuring checklist */
+.check{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+@media(max-width:700px){.check{grid-template-columns:1fr}}
+.check .row{display:flex;gap:14px;background:var(--panel);border:1px solid rgba(255,255,255,.06);border-left:3px solid var(--gold);border-radius:13px;padding:16px 20px;align-items:flex-start;color:var(--muted);font-size:14.5px}
+.check .row::before{content:'✓';flex:none;width:22px;height:22px;border-radius:7px;border:2px solid var(--gold);color:var(--gold);font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.check .row b{color:var(--text)}
+
+/* risk flags */
+.flag{display:flex;gap:16px;background:var(--panel);border:1px solid rgba(217,122,114,.25);border-left:3px solid var(--red);border-radius:13px;padding:16px 20px;align-items:flex-start;color:var(--muted);font-size:14.5px;margin-bottom:10px}
+.flag::before{content:'!';flex:none;width:22px;height:22px;border-radius:50%;background:rgba(217,122,114,.14);border:1px solid rgba(217,122,114,.3);color:var(--red);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.flag b{color:var(--text)}
+
+.plus{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:700px){.plus{grid-template-columns:1fr}}
+.plus .p{display:flex;gap:14px;background:var(--panel);border:1px solid rgba(224,169,74,.25);border-left:3px solid var(--amber);border-radius:13px;padding:15px 19px;align-items:flex-start;color:var(--muted);font-size:14px}
+.plus .p::before{content:'+';flex:none;width:22px;height:22px;border-radius:50%;background:rgba(224,169,74,.14);border:1px solid rgba(224,169,74,.3);color:var(--amber);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+
+.warn{background:rgba(217,122,114,.08);border:1px solid rgba(217,122,114,.3);border-left:3px solid var(--red);border-radius:14px;padding:22px 26px;margin-top:24px}
+.warn h4{color:var(--red);font-size:15px;font-weight:700;margin-bottom:8px}
+.warn p{color:var(--muted);font-size:14.5px}
+.warn p b{color:var(--red)}
+
+.callout{background:linear-gradient(135deg,rgba(212,175,55,.08),transparent);border:1px solid var(--line);border-radius:16px;padding:28px 30px;margin-top:22px}
+.callout .l{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
+.callout p{color:var(--text);font-size:16.5px}
+.callout p b{color:var(--gold-soft)}
+
+.quote{margin-top:34px;text-align:center;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--gold-soft);max-width:60ch;margin-left:auto;margin-right:auto;line-height:1.5}
+
+.book{background:linear-gradient(135deg,#241d10,#15110a);border:1px solid var(--line);border-radius:18px;padding:30px 34px;text-align:center;margin-top:24px}
+.book .l{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
+.book p{color:var(--text);font-size:16.5px;max-width:60ch;margin:0 auto;line-height:1.6}
+.book p b{color:var(--gold-soft)}
+
+.cta{background:linear-gradient(135deg,var(--panel),var(--darker));border:1px solid var(--line);border-radius:22px;padding:52px 44px;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:520px;height:420px;background:radial-gradient(circle,rgba(212,175,55,.14),transparent 70%);pointer-events:none}
+.cta-photo{position:relative;width:132px;height:132px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:3px solid var(--gold);box-shadow:0 12px 34px rgba(0,0,0,.45);margin:0 auto 22px;display:block}
+.cta h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(26px,4vw,40px);color:#fff;position:relative;line-height:1.14}
+.cta p{color:var(--muted);max-width:54ch;margin:18px auto 0;position:relative;font-size:17px}
+.btn{display:inline-block;margin-top:30px;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#1a1206;font-weight:600;font-size:15.5px;padding:15px 34px;border-radius:999px;position:relative;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 30px rgba(212,175,55,.22)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(212,175,55,.32);text-decoration:none}
+.cta .socials{margin-top:26px;display:flex;gap:24px;justify-content:center;position:relative}
+.cta .socials a{color:var(--muted);font-size:13.5px;cursor:pointer}
+
+.disclaimer{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:22px 26px;color:var(--muted-2);font-size:13.5px;line-height:1.6}
+.disclaimer b{color:var(--muted)}
+footer{padding:44px 0;border-top:1px solid var(--line);color:var(--muted-2);font-size:13px}
+footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+.hero-visual{margin-top:40px;border-radius:20px;overflow:hidden;border:1px solid var(--line);position:relative;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.hero-visual img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,19,30,.05),rgba(13,19,30,.55));pointer-events:none}
+.band{margin:0;border-radius:18px;overflow:hidden;border:1px solid var(--line);position:relative}
+.band img{width:100%;display:block;aspect-ratio:21/9;object-fit:cover}
+.band::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,19,30,.10),rgba(13,19,30,.60));pointer-events:none}
+
+.more{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:860px){.more{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.more{grid-template-columns:1fr}}
+.more a{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px 22px;display:block;transition:border-color .2s,transform .2s;text-decoration:none}
+.more a:hover{border-color:var(--line);transform:translateY(-2px);text-decoration:none}
+.more a .t{display:block;font-family:'Fraunces',serif;font-size:18px;color:#fff;font-weight:500}
+.more a .d{display:block;color:var(--muted);font-size:14px;margin-top:4px}
+.more a .go{color:var(--gold);font-size:13px;margin-top:10px;display:block}
+.tools{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.tool-btn{background:transparent;border:1px solid var(--line);color:var(--gold-soft);font-size:13.5px;font-weight:500;padding:11px 20px;border-radius:999px;cursor:pointer;font-family:inherit;transition:background .2s}
+.tool-btn:hover{background:rgba(212,175,55,.08)}
+
+@media print{
+  @page{margin:16mm}
+  #progress,header,.nl-overlay,.tools,.hero-visual,.band,.cta,.more-sec,.chal,.book{display:none !important}
+  html,body{background:#fff !important;color:#111 !important}
+  body{font-size:10.5pt}
+  .reveal{opacity:1 !important;transform:none !important}
+  section{padding:10px 0 !important;border-top:none !important}
+  .container{max-width:100% !important;padding:0 !important}
+  h1,h2,h3,h4,.brand{color:#111 !important}
+  .eyebrow,.principle .l,.callout .l,.tbl th,.tbl caption{color:#8a6d1f !important}
+  p,li,.sec-head p{color:#333 !important}
+  .check .row,.disclaimer,.principle,.tblnote,.flag,.plus .p,.callout,.warn{background:#fff !important;border:1px solid #ccc !important;box-shadow:none !important;color:#111 !important}
+  .tbl,.tbl-wrap{border-color:#bbb !important}
+  .tbl th{background:#f3f3f3 !important}
+  .tbl caption{background:#fff !important}
+  .tbl tbody tr{background:#fff !important}
+  .tbl td,.tbl th{border-color:#ddd !important}
+  .tbl td.w{color:#111 !important}
+  .tbl td.v,.hero .sub,.quote{color:#8a6d1f !important}
+  .src{color:#777 !important}
+  a{color:#111 !important;text-decoration:none !important}
+}
+
+.nl-overlay{position:fixed;inset:0;background:rgba(6,10,16,.72);backdrop-filter:blur(4px);z-index:3000;display:none;align-items:center;justify-content:center;padding:20px}
+.nl-overlay.open{display:flex}
+.nl-modal{background:var(--panel);border:1px solid var(--line);border-radius:20px;max-width:440px;width:100%;padding:34px 32px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.nl-modal h3{font-family:'Fraunces',serif;font-weight:500;font-size:24px;color:#fff;margin-bottom:8px}
+.nl-modal p.intro{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+.nl-close{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--muted);font-size:26px;cursor:pointer;line-height:1;padding:4px}
+.nl-close:hover{color:var(--gold)}
+.nl-field{margin-bottom:14px}
+.nl-field label{display:block;font-size:12.5px;color:var(--gold);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+.nl-field input{width:100%;background:var(--darker);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 14px;color:var(--text);font-size:15px;font-family:inherit}
+.nl-field input:focus{outline:none;border-color:var(--gold)}
+.nl-field .opt{color:var(--muted-2);text-transform:none;letter-spacing:0;font-weight:400}
+.nl-submit{width:100%;margin-top:8px;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#1a1206;font-weight:600;font-size:15px;padding:14px;border:none;border-radius:999px;cursor:pointer;transition:transform .2s}
+.nl-submit:hover{transform:translateY(-1px)}
+.nl-submit[disabled]{opacity:.6;cursor:default}
+.nl-note{margin-top:14px;font-size:11.5px;color:var(--muted-2);line-height:1.5}
+.nl-success{text-align:center;padding:16px 0}
+.nl-success .ok{font-size:44px;color:var(--green);line-height:1;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header>
+  <div class="container">
+    <div class="brand">Dr. Lara <span>Vadlau</span></div>
+    <nav class="links">
+      <a href="#blutdruck">Blutdruck</a>
+      <a href="#blutzucker">Blutzucker</a>
+      <a href="#blutfette">Blutfette</a>
+      <a href="#weitere">Weitere Werte</a>
+      <a href="#risiko">Dein Risiko</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="border-top:none">
+  <div class="container">
+    <div class="eyebrow reveal">Herzwerte-Checkliste · Vertiefung zum Reel</div>
+    <h1 class="reveal">Deine <em>Herzwerte</em>. Die Checkliste.</h1>
+    <p class="sub reveal">Die Zahlen, die du kennen solltest, bevor dein Herz sich meldet.</p>
+    <p class="lede reveal">Herz-Kreislauf-Erkrankungen sind in Österreich und Deutschland die häufigste Todesursache. Das Tückische: <b>Bluthochdruck, erhöhte Blutfette und ein steigender Blutzucker tun jahrelang nicht weh.</b> Diese Liste zeigt dir, welche Werte zählen, wo die Grenzen laut den aktuellen europäischen Leitlinien liegen und wie du dein persönliches Risiko einordnest. Drucke sie aus und nimm sie zu deinem nächsten Termin mit.</p>
+    <div class="byline reveal">
+      <div class="avatar"><img src="lara-avatar.jpg" alt="Dr. Lara Vadlau"></div>
+      <div>Von <b>Dr. Lara Vadlau</b> · Longevity Medicine</div>
+    </div>
+    <div class="tools reveal">
+      <button class="tool-btn" onclick="window.print()">Als PDF speichern oder drucken</button>
+      <button class="tool-btn" id="shareBtn">Link teilen</button>
+    </div>
+    <div class="hero-visual reveal"><img src="hero.webp" alt="Stethoskop, Notizbuch und Maßband auf dunklem Stein" loading="eager"></div>
+  </div>
+</section>
+
+<!-- BLUTDRUCK -->
+<section id="blutdruck">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Bereich 1</div>
+      <h2>Blutdruck.</h2>
+    </div>
+    <div class="tbl-wrap reveal"><table class="tbl">
+      <caption>In der Praxis gemessen</caption>
+      <thead><tr><th>Einordnung</th><th>Oberer Wert</th><th></th><th>Unterer Wert</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Nicht erhöht</td><td class="v">unter 120</td><td class="w">und</td><td class="v">unter 70 mmHg</td></tr>
+        <tr><td class="a">Erhöht</td><td class="v">120 bis 139</td><td class="w">oder</td><td class="v">70 bis 89 mmHg</td></tr>
+        <tr><td class="r">Bluthochdruck</td><td class="v">ab 140</td><td class="w">oder</td><td class="v">ab 90 mmHg</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tblnote reveal"><b>Zuhause gemessen</b> gilt eine niedrigere Grenze: Bluthochdruck ab 135/85 mmHg. <b>Wie oft?</b> Unter 40 Jahren mit normalen Werten mindestens alle 3 Jahre, ab 40 jährlich.</div>
+
+    <div class="sec-head reveal gap">
+      <h2 style="font-size:clamp(22px,3vw,30px)">So misst du richtig.</h2>
+    </div>
+    <div class="check">
+      <div class="row reveal"><span><b>5 Minuten ruhig sitzen,</b> Rücken angelehnt, Beine nicht überkreuzt</span></div>
+      <div class="row reveal"><span><b>Manschette am Oberarm auf Herzhöhe,</b> Arm aufgelegt</span></div>
+      <div class="row reveal"><span><b>30 Minuten vorher</b> kein Kaffee, keine Zigarette, kein Sport</span></div>
+      <div class="row reveal"><span><b>Nicht sprechen</b> und nicht aufs Handy schauen während der Messung</span></div>
+      <div class="row reveal"><span><b>Zwei Messungen im Abstand von 1 Minute,</b> Mittelwert notieren</span></div>
+      <div class="row reveal"><span><b>7 Tage lang morgens und abends messen,</b> dann Durchschnitt bilden</span></div>
+    </div>
+    <span class="src reveal">Grenzwerte nach ESC-Leitlinie Bluthochdruck 2024</span>
+  </div>
+</section>
+
+<!-- BLUTZUCKER -->
+<section id="blutzucker">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Bereich 2</div>
+      <h2>Blutzucker.</h2>
+    </div>
+    <div class="tbl-wrap reveal"><table class="tbl">
+      <caption>Nüchternglukose und HbA1c</caption>
+      <thead><tr><th>Einordnung</th><th>Nüchternglukose</th><th>HbA1c (Langzeitzucker)</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Normal</td><td class="v">unter 100 mg/dl</td><td class="v">unter 5,7 %</td></tr>
+        <tr><td class="a">Vorstufe (Prädiabetes)</td><td class="v">100 bis 125 mg/dl</td><td class="v">5,7 bis 6,4 %</td></tr>
+        <tr><td class="r">Diabetes</td><td class="v">ab 126 mg/dl</td><td class="v">ab 6,5 %</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tblnote reveal"><b>Nüchtern</b> heißt mindestens 8 Stunden ohne Essen. Die Nüchternglukose ist eine Momentaufnahme, der HbA1c zeigt den Durchschnitt der letzten 2 bis 3 Monate. Beide zusammen ergeben das bessere Bild. Eine Diabetesdiagnose braucht immer eine Bestätigung durch eine zweite Messung. <b>Wie oft?</b> Ab 35 Jahren mindestens alle 3 Jahre, bei Übergewicht oder familiärer Belastung früher.</div>
+    <span class="src reveal">Nach American Diabetes Association. Die Grenze der Vorstufe wird international unterschiedlich gezogen (WHO: Nüchternglukose ab 110 mg/dl).</span>
+  </div>
+</section>
+
+<!-- BLUTFETTE -->
+<section id="blutfette">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Bereich 3</div>
+      <h2>Blutfette.</h2>
+      <p>Wichtig vorab: Für LDL gibt es keinen einzigen „Normalwert". Wie niedrig dein LDL sein sollte, hängt von deinem Gesamtrisiko ab. Deshalb zuerst unten dein Risikoprofil bestimmen und dann hier deinen Zielwert ablesen.</p>
+    </div>
+    <div class="tbl-wrap reveal"><table class="tbl">
+      <caption>LDL-Cholesterin, Non-HDL und ApoB: Zielwerte nach Risiko</caption>
+      <thead><tr><th>Dein Risiko</th><th>LDL-Ziel</th><th>Non-HDL-Ziel</th><th>ApoB-Ziel</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Niedrig</td><td class="v">unter 116 mg/dl</td><td class="v">unter 145 mg/dl</td><td class="v">unter 100 mg/dl</td></tr>
+        <tr><td class="w">Moderat</td><td class="v">unter 100 mg/dl</td><td class="v">unter 130 mg/dl</td><td class="v">unter 100 mg/dl</td></tr>
+        <tr><td class="a">Hoch</td><td class="v">unter 70 mg/dl</td><td class="v">unter 100 mg/dl</td><td class="v">unter 80 mg/dl</td></tr>
+        <tr><td class="r">Sehr hoch</td><td class="v">unter 55 mg/dl</td><td class="v">unter 85 mg/dl</td><td class="v">unter 65 mg/dl</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tblnote reveal"><b>LDL ist der Hauptverursacher von Gefäßverkalkung.</b> Non-HDL (Gesamtcholesterin minus HDL) und ApoB erfassen alle schädlichen Partikel und sind besonders aussagekräftig, wenn deine Triglyzeride erhöht sind. Ab einem LDL von 190 mg/dl solltest du unabhängig vom Alter an eine familiäre Hypercholesterinämie denken und das abklären lassen.</div>
+
+    <div class="tbl-wrap reveal gap"><table class="tbl">
+      <caption>HDL und Triglyzeride</caption>
+      <thead><tr><th>Wert</th><th>Günstig</th><th>Aufmerksam werden</th></tr></thead>
+      <tbody>
+        <tr><td class="w">HDL</td><td class="v">Männer ab 40, Frauen ab 45 mg/dl</td><td class="v">darunter</td></tr>
+        <tr><td class="w">Triglyzeride (nüchtern)</td><td class="v">unter 150 mg/dl</td><td class="v">ab 150 mg/dl</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tblnote reveal"><b>Mehr HDL ist nicht automatisch besser.</b> Ein niedriges HDL ist ein Warnsignal, es gezielt mit Medikamenten anzuheben hat in Studien aber keinen Schutz gezeigt. Hohe Triglyzeride hängen oft mit Zucker, Alkohol und Bauchfett zusammen.</div>
+
+    <div class="tbl-wrap reveal gap"><table class="tbl">
+      <caption>Lipoprotein(a): einmal im Leben messen</caption>
+      <thead><tr><th>Einordnung</th><th>mg/dl</th><th>nmol/l</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Unauffällig</td><td class="v">unter 30</td><td class="v">unter 75</td></tr>
+        <tr><td class="a">Graubereich</td><td class="v">30 bis 50</td><td class="v">75 bis 125</td></tr>
+        <tr><td class="r">Erhöhtes Risiko</td><td class="v">über 50</td><td class="v">über 125</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tblnote reveal"><b>Lp(a) ist fast vollständig genetisch festgelegt</b> und lässt sich durch Ernährung oder Sport kaum verändern. Rund jeder Fünfte hat einen erhöhten Wert, ohne es zu wissen. Ist er hoch, sollten alle anderen Risikofaktoren umso konsequenter gesenkt werden. Werte über 180 mg/dl gelten als sehr hohes Risiko.</div>
+    <span class="src reveal">Zielwerte nach ESC/EAS-Leitlinie Dyslipidämie 2019, ESC-Präventionsleitlinie 2021 und EAS-Konsensus Lipoprotein(a) 2022. Die Umrechnung zwischen mg/dl und nmol/l ist nur näherungsweise möglich, daher immer die Einheit deines Labors notieren.</span>
+  </div>
+</section>
+
+<!-- SECTION IMAGE -->
+<section style="padding:0 0 8px;border-top:none">
+  <div class="container">
+    <div class="band reveal"><img src="sec.webp" alt="Goldene Herzschlaglinie auf dunklem Stein" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- WEITERE WERTE -->
+<section id="weitere">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Bereich 4</div>
+      <h2>Bauchumfang und Entzündung.</h2>
+    </div>
+    <div class="tbl-wrap reveal"><table class="tbl">
+      <thead><tr><th>Wert</th><th>Günstig</th><th>Erhöht</th><th>Deutlich erhöht</th></tr></thead>
+      <tbody>
+        <tr><td class="w">Bauchumfang Männer</td><td class="g">unter 94 cm</td><td class="a">94 bis 101 cm</td><td class="r">ab 102 cm</td></tr>
+        <tr><td class="w">Bauchumfang Frauen</td><td class="g">unter 80 cm</td><td class="a">80 bis 87 cm</td><td class="r">ab 88 cm</td></tr>
+        <tr><td class="w">hs-CRP</td><td class="g">unter 1 mg/l</td><td class="a">1 bis 3 mg/l</td><td class="r">über 3 mg/l</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tblnote reveal"><b>Bauchumfang</b> auf Höhe des Nabels, im Stehen, nach dem Ausatmen messen. <b>hs-CRP</b> zeigt stille Entzündung in den Gefäßen, aber nur ohne akuten Infekt. Werte über 10 mg/l sprechen eher für eine Infektion und sollten wiederholt werden.</div>
+  </div>
+</section>
+
+<!-- RISIKO -->
+<section id="risiko">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Bereich 5</div>
+      <h2>Dein Risikoprofil in 3 Schritten.</h2>
+    </div>
+
+    <div class="sec-head reveal" style="margin-bottom:20px">
+      <h2 style="font-size:clamp(22px,3vw,30px)">Schritt 1: Trifft etwas davon zu?</h2>
+    </div>
+    <div class="flag reveal"><span>Herzinfarkt, Schlaganfall, Stent, Bypass oder bekannte Verengung der Gefäße</span></div>
+    <div class="flag reveal"><span>Diabetes mit Folgeschäden (z. B. an Niere, Augen, Nerven) oder seit mehr als 10 Jahren</span></div>
+    <div class="flag reveal"><span>Deutlich eingeschränkte Nierenfunktion</span></div>
+    <div class="flag reveal"><span>LDL ab 190 mg/dl oder bekannte familiäre Hypercholesterinämie</span></div>
+    <div class="flag reveal"><span>Blutdruck ab 180/110 mmHg</span></div>
+    <div class="tblnote reveal"><b>Ein Kreuz genügt:</b> Dann gehörst du automatisch in die Gruppe hohes oder sehr hohes Risiko. Ein Rechner ist nicht nötig, die Betreuung gehört in ärztliche Hände.</div>
+
+    <div class="sec-head reveal gap" style="margin-bottom:20px">
+      <h2 style="font-size:clamp(22px,3vw,30px)">Schritt 2: Dein 10-Jahres-Risiko berechnen.</h2>
+      <p>Kein Kreuz bei Schritt 1? Dann berechne dein Risiko mit dem offiziellen Rechner der Europäischen Gesellschaft für Kardiologie (ESC HeartScore, SCORE2 für 40 bis 69 Jahre, SCORE2-OP ab 70). Du brauchst: Alter, Geschlecht, Raucherstatus, oberen Blutdruckwert, Gesamtcholesterin und HDL. Wähle als Region „moderates Risiko" für Österreich und Deutschland, „niedriges Risiko" für die Schweiz.</p>
+    </div>
+    <div class="tbl-wrap reveal"><table class="tbl">
+      <thead><tr><th>Alter</th><th>Niedrig bis moderat</th><th>Hoch</th><th>Sehr hoch</th></tr></thead>
+      <tbody>
+        <tr><td class="w">unter 50</td><td class="g">unter 2,5 %</td><td class="a">2,5 bis 7,4 %</td><td class="r">ab 7,5 %</td></tr>
+        <tr><td class="w">50 bis 69</td><td class="g">unter 5 %</td><td class="a">5 bis 9,9 %</td><td class="r">ab 10 %</td></tr>
+        <tr><td class="w">ab 70</td><td class="g">unter 7,5 %</td><td class="a">7,5 bis 14,9 %</td><td class="r">ab 15 %</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="sec-head reveal gap" style="margin-bottom:20px">
+      <h2 style="font-size:clamp(22px,3vw,30px)">Schritt 3: Was dein Risiko zusätzlich erhöht.</h2>
+      <p>Diese Faktoren stecken nicht im Rechner. Jedes Kreuz spricht dafür, dein Risiko eher eine Stufe höher einzuordnen.</p>
+    </div>
+    <div class="plus">
+      <div class="p reveal"><span>Vater oder Bruder mit Herzinfarkt vor 55, Mutter oder Schwester vor 60</span></div>
+      <div class="p reveal"><span>Lp(a) über 50 mg/dl</span></div>
+      <div class="p reveal"><span>Diabetes oder Prädiabetes</span></div>
+      <div class="p reveal"><span>Bauchumfang über dem Grenzwert</span></div>
+      <div class="p reveal"><span>Bewegungsmangel, wenig Ausdauertraining</span></div>
+      <div class="p reveal"><span>Dauerhaft hoher Stress oder schlechter Schlaf</span></div>
+      <div class="p reveal"><span>Entzündliche Erkrankung (z. B. Rheuma, Schuppenflechte)</span></div>
+      <div class="p reveal"><span>Bei Frauen: Präeklampsie oder Schwangerschaftsdiabetes in der Vorgeschichte</span></div>
+    </div>
+
+    <div class="callout reveal">
+      <div class="l">Dein Herzpass</div>
+      <p>Drucke diese Seite über den Button oben aus und trage deine Werte mit Datum ein. So siehst du über die Jahre, <b>wohin sich deine Zahlen bewegen</b>, und hast beim Arzttermin alles auf einen Blick. Was du im Alltag konkret tun kannst, liest du im <a href="https://lara-herz.vercel.app" style="color:var(--gold-soft);text-decoration:underline">Herz-Guide</a>.</p>
+    </div>
+
+    <div class="warn reveal">
+      <h4>Sofort handeln statt abwarten</h4>
+      <p>Brustschmerz oder Engegefühl, das in Arm, Kiefer oder Rücken ausstrahlt, plötzliche Atemnot, Lähmung, Sprach- oder Sehstörung sind ein Notfall. Dann ohne Zögern den Notruf wählen: <b>144 in Österreich, 112 in Deutschland</b> und europaweit.</p>
+    </div>
+
+    <p class="quote reveal">„Deine Werte sind kein Schicksal. Fast alles auf dieser Liste lässt sich verändern: durch Bewegung, Ernährung, Schlaf und, wo nötig, Medikamente."</p>
+
+    <div class="book reveal">
+      <div class="l">Mehr dazu in meinem Buch</div>
+      <p>Wie du dein biologisches Alter beeinflusst: Das liest du in <a href="https://hi.switchy.io/10PTn" target="_blank" rel="noopener" style="color:var(--gold-soft);text-decoration:underline"><b>Die Alterslüge</b></a>.</p>
+      <a href="https://hi.switchy.io/10PTn" target="_blank" rel="noopener" style="display:inline-block;margin-top:16px;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#1a1206;font-weight:600;font-size:14.5px;padding:12px 26px;border-radius:999px;text-decoration:none;box-shadow:0 8px 22px rgba(212,175,55,.22)">Jetzt lesen &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="start">
+  <div class="container">
+    <div class="cta reveal">
+      <img class="cta-photo" src="lara-portrait.jpg" alt="Dr. Lara Vadlau" loading="lazy">
+      <h2>Wissen, das du beim nächsten<br>Arzttermin mitnimmst.</h2>
+      <p>Ich baue jede Woche Reels und Vertiefungen wie diese: die Leitlinien, übersetzt in klare Zahlen. Kein Hype, keine Panik, nur das, was die Evidenz hergibt.</p>
+      <a class="btn" href="https://www.instagram.com/laravadlau/" target="_blank" rel="noopener">Folge für mehr auf Instagram →</a>
+      <div class="socials">
+        <a href="https://www.instagram.com/laravadlau/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" data-nl-open>Newsletter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MORE GUIDES -->
+<section class="more-sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Weitere Guides</div>
+      <h2>Mehr Longevity-Wissen.</h2>
+      <p>Alle Guides von Dr. Lara Vadlau, jederzeit nachlesbar.</p>
+    </div>
+    <div class="more reveal">
+      <a href="https://lara-herz.vercel.app"><span class="t">Herz</span><span class="d">Checkliste gegen stille Gefäßalterung</span><span class="go">Ansehen &rarr;</span></a>
+      <a href="https://lara-blutwerte.vercel.app"><span class="t">Blutwerte</span><span class="d">Optimalwerte-Checkliste</span><span class="go">Ansehen &rarr;</span></a>
+      <a href="https://lara-zucker.vercel.app"><span class="t">Zucker</span><span class="d">der 30-Sekunden-Etiketten-Check</span><span class="go">Ansehen &rarr;</span></a>
+      <a href="https://lara-nierenwerte.vercel.app"><span class="t">Nierenwerte</span><span class="d">Funktion &amp; Schaden messen</span><span class="go">Ansehen &rarr;</span></a>
+      <a href="https://lara-demenz.vercel.app"><span class="t">Demenz</span><span class="d">16 Schritte für dein Gehirn</span><span class="go">Ansehen &rarr;</span></a>
+      <a href="https://lara-altern.vercel.app"><span class="t">Altern</span><span class="d">die 5-Punkte-Checkliste</span><span class="go">Ansehen &rarr;</span></a>
+    </div>
+    <p style="margin-top:22px;color:var(--muted-2);font-size:13.5px">Alle Guides auf einen Blick: <a href="https://lara-wissen.vercel.app">lara-wissen.vercel.app</a></p>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section style="padding-top:20px">
+  <div class="container">
+    <div class="disclaimer reveal">
+      <b>Wichtiger Hinweis.</b> Diese Checkliste dient der allgemeinen Information und ersetzt keine ärztliche Untersuchung, Diagnose oder Behandlung. Bitte besprich deine Werte und Zielwerte immer mit deiner Ärztin oder deinem Arzt. Risikoeinteilung nach ESC-Präventionsleitlinie 2021.
+    </div>
+  </div>
+</section>
+
+<!-- CHALLENGE CTA -->
+<section class="chal" style="padding:0 0 26px">
+  <div class="container">
+    <div class="reveal" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;background:linear-gradient(135deg,rgba(212,175,55,.14),rgba(212,175,55,.03));border:1px solid var(--line);border-radius:18px;padding:26px 30px">
+      <div style="min-width:240px;flex:1">
+        <div style="font-family:'Fraunces',serif;font-size:22px;color:#fff;font-weight:500">Du willst mehr?</div>
+        <div style="color:var(--muted);font-size:15px;margin-top:5px">Die <b style="color:var(--gold-soft)">30-Tage-Longevity-Challenge</b> gibt es jetzt im Angebot.</div>
+      </div>
+      <a href="https://hi.switchy.io/zFRA" target="_blank" rel="noopener" style="flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#1a1206;font-weight:600;font-size:15px;padding:14px 28px;border-radius:999px;white-space:nowrap;text-decoration:none;box-shadow:0 10px 26px rgba(212,175,55,.22)">Zur 30-Tage-Challenge &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© 2026 Dr. Lara Vadlau · Longevity Medicine</div>
+    <div>Wissens-Vertiefung zum Reel · Keyword: <b style="color:var(--gold)">HERZWERTE</b> · <a href="https://lara-wissen.vercel.app/impressum">Impressum</a> · <a href="https://lara-wissen.vercel.app/datenschutz">Datenschutz</a></div>
+  </div>
+</footer>
+
+<!-- NEWSLETTER MODAL -->
+<div class="nl-overlay" id="nlOverlay" role="dialog" aria-modal="true" aria-label="Newsletter-Anmeldung">
+  <div class="nl-modal">
+    <button class="nl-close" id="nlClose" aria-label="Schliessen">&times;</button>
+    <div id="nlForming">
+      <h3>Newsletter</h3>
+      <p class="intro">Longevity-Wissen, ehrlich eingeordnet. Kein Spam, jederzeit abbestellbar.</p>
+      <form id="nlForm" novalidate>
+        <div class="nl-field"><label for="nlName">Name</label><input id="nlName" name="name" type="text" required autocomplete="name"></div>
+        <div class="nl-field"><label for="nlEmail">E-Mail-Adresse</label><input id="nlEmail" name="email" type="email" required autocomplete="email"></div>
+        <div class="nl-field"><label for="nlPhone">Handynummer <span class="opt">(optional)</span></label><input id="nlPhone" name="phone" type="tel" autocomplete="tel"></div>
+        <button class="nl-submit" type="submit">Anmelden</button>
+        <p class="nl-note">Mit Klick auf „Anmelden" willigst du ein, dass deine Angaben zum Versand des Newsletters gespeichert und verarbeitet werden. Du kannst dich jederzeit über den Abmeldelink in jeder E-Mail wieder abmelden. Mehr dazu in der <a href="https://lara-wissen.vercel.app/datenschutz" target="_blank" rel="noopener" style="color:var(--gold-soft)">Datenschutzerklärung</a>.</p>
+      </form>
+    </div>
+    <div id="nlDone" class="nl-success" style="display:none">
+      <div class="ok">&#10003;</div>
+      <h3>Danke, du bist dabei!</h3>
+      <p class="intro">Wir haben deine Anmeldung erhalten.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const prog=document.getElementById('progress');
+addEventListener('scroll',()=>{const h=document.documentElement;prog.style.width=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100+'%';});
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(function(){
+  var ENDPOINT="https://script.google.com/macros/s/AKfycbxr7dsmt1WNeWHnz8ORkzMpfqTb0o7GfyZQCNAbmtPFQ9CBpt3sR93Pl4tDfr-BupeviA/exec";
+  var SOURCE="HERZWERTE";
+  var ov=document.getElementById('nlOverlay');
+  if(!ov)return;
+  function open(e){if(e)e.preventDefault();ov.classList.add('open');setTimeout(function(){var n=document.getElementById('nlName');if(n)n.focus();},60);}
+  function close(){ov.classList.remove('open');}
+  document.querySelectorAll('[data-nl-open]').forEach(function(a){a.addEventListener('click',open);});
+  document.getElementById('nlClose').addEventListener('click',close);
+  ov.addEventListener('click',function(e){if(e.target===ov)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  document.getElementById('nlForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('nlName').value.trim();
+    var email=document.getElementById('nlEmail').value.trim();
+    var phone=document.getElementById('nlPhone').value.trim();
+    if(!name||!email){return;}
+    var btn=this.querySelector('.nl-submit');btn.disabled=true;btn.textContent='Wird gesendet...';
+    var body=new URLSearchParams({name:name,email:email,phone:phone,source:SOURCE}).toString();
+    var done=function(){document.getElementById('nlForming').style.display='none';document.getElementById('nlDone').style.display='block';};
+    fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:body}).then(done).catch(done);
+  });
+})();
+(function(){
+  var b=document.getElementById('shareBtn'); if(!b) return;
+  b.addEventListener('click',async function(){
+    var d={title:document.title,url:location.href};
+    try{
+      if(navigator.share){await navigator.share(d);}
+      else{await navigator.clipboard.writeText(location.href); b.textContent='Link kopiert';setTimeout(function(){b.textContent='Link teilen';},2000);}
+    }catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
